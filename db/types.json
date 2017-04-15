@@ -5,6 +5,18 @@
             "category": 0,
             "name": "personal",
             "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+            "id": 0,
+            "category": 0,
+            "name": "handheld",
+            "description": "handheld intended for recreational use during holiday celebrations"
+        },
+        {
+            "id": 0,
+            "category": 0,
+            "name": "heavy artillery",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
         }
     ]
 }
