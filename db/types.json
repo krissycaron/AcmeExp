@@ -2,21 +2,18 @@
     "types": [
         {
             "id": 0,
-            "category": 0,
-            "name": "personal",
-            "description": "Fireworks intended for recreational use during holiday celebrations"
+            "name": "Personal",
+            "description": "Small grade products"
         },
         {
-            "id": 0,
-            "category": 0,
-            "name": "handheld",
-            "description": "handheld intended for recreational use during holiday celebrations"
+            "id": 1,
+            "name": "Handheld",
+            "description": "Products held for use"
         },
         {
-            "id": 0,
-            "category": 0,
-            "name": "heavy artillery",
-            "description": "Fireworks intended for recreational use during holiday celebrations"
-        }
+            "id": 2,
+            "name": "Heavy Duty",
+            "description": "Very dangerous. Take precaution!" 
+        } 
     ]
 }

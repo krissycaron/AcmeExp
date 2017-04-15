@@ -1,15 +1,44 @@
 $(document).ready(function(){
 
     var expolsive = [];
+    var productsArray = [];
+    var typesArray = [];
+    var categoriesArray = [];
 
 
     function writeDOM(){
         var domString = "";
         for(var i=0; i<expolsive.length; i++){
+            domString += `<div class="col-sm-6 col-md-4 container">`
+            domString += `<div class="row" id="card-${[i]}">`
             domString += `<h1>${expolsive[i].name}</h1>`;
-            domString += `<h1>${expolsive[i].name}</h1>`;
+            domString += `<h1>${expolsive[i].description}</h1>`;
+            domString += `</div></div>`;
         }
         $("#explosiveDiv").append(domString);
+        if($(expolsive).length){
+            $("#card")
+                // if($('#myModal').length) {
+                // $("#")
+                   
+                // $('#purchaseNotice').html($('#myModal').html()) // set html
+                // .show(); // show purchaseNotice div
+                // } else {
+                //    $('#purchaseNotice').hide();
+                // }
+        }
+    }
+
+    function catArrayPrint(){
+        var catString = "";
+            catString += `<select>`
+            catString += `<option>Select Category</option>`
+        for (var k=0; k<categoriesArray.length; k++){
+            catString += `<option>${categoriesArray[k].name}</option>`
+        }
+            catString += `</select>`;
+            $("#explosiveDiv").append(catString);
+    
     }
 
 
@@ -43,14 +72,20 @@ $(document).ready(function(){
         })
     };
 
+        categoriesJSON().then(function(category){
+            category.forEach(function(cat){
+            categoriesArray.push(cat);
+            })
+            catArrayPrint(categoriesArray);
+        });
 
    
 
     //this method works the best for this solution
-    Promise.all([categoriesJSON(), typesJSON(), productsJSON()])
-        .then(function(resultz){
-            console.log("resultz", resultz);
-            resultz.forEach(function(ajaxCalls){
+    Promise.all([typesJSON(), productsJSON()])
+        .then(function(results){
+            console.log("results", results);
+            results.forEach(function(ajaxCalls){
                 ajaxCalls.forEach(function(boom){
                     expolsive.push(boom);
                 })
