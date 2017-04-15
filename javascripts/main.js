@@ -7,6 +7,7 @@ $(document).ready(function(){
         var domString = "";
         for(var i=0; i<expolsive.length; i++){
             domString += `<h1>${expolsive[i].name}</h1>`;
+            domString += `<h1>${expolsive[i].name}</h1>`;
         }
         $("#explosiveDiv").append(domString);
     }
