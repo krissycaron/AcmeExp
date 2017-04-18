@@ -41,6 +41,29 @@ $(document).ready(function(){
     
     }
 
+    function typeArrayPrint(){
+        var typeString = "";
+            typeString += `<select>`
+            typeString += `<option>Select Type</option>`
+        for (var k=0; k<typesArray.length; k++){
+            typeString += `<option>${typesArray[k].name}</option>`
+        }
+            typeString += `</select>`;
+            $("#explosiveDiv").append(typeString);
+    
+    }
+
+    function productArrayPrint(){
+        var productString = "";
+            productString += `<select>`
+            productString += `<option>Select Product</option>`
+        for (var k=0; k<productsArray.length; k++){
+            productString += `<option>${productsArray[k].name}</option>`
+        }
+            productString += `</select>`;
+            $("#explosiveDiv").append(productString);
+    
+    }
 
     var categoriesJSON = function(){
         return new Promise(function(resolve, reject){
@@ -79,18 +102,31 @@ $(document).ready(function(){
             catArrayPrint(categoriesArray);
         });
 
-   
-
-    //this method works the best for this solution
-    Promise.all([typesJSON(), productsJSON()])
-        .then(function(results){
-            console.log("results", results);
-            results.forEach(function(ajaxCalls){
-                ajaxCalls.forEach(function(boom){
-                    expolsive.push(boom);
-                })
+        typesJSON().then(function(typesfile){
+            typesfile.forEach(function(type){
+            typesArray.push(type);
             })
+            typeArrayPrint(typesArray);
+        });
+        productsJSON().then(function(products){
+            products.forEach(function(prod){
+            productsArray.push(prod);
+            })
+            productArrayPrint(productsArray);
             writeDOM();
-        })
+        });
+    
+
+    // //this method works the best for this solution
+    // Promise.all([typesJSON(), productsJSON()])
+    //     .then(function(results){
+    //         console.log("results", results);
+    //         results.forEach(function(ajaxCalls){
+    //             ajaxCalls.forEach(function(boom){
+    //                 expolsive.push(boom);
+    //             })
+    //         })
+           
+    //     })
 });
 
