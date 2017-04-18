@@ -15,9 +15,9 @@ $(document).ready(function(){
             domString += `<h1>${expolsive[i].description}</h1>`;
             domString += `</div></div>`;
         }
-        $("#explosiveDiv").append(domString);
-        if($(expolsive).length){
-            $("#card")
+        // $("#explosiveDiv").append(domString);
+        // if($(expolsive).length){
+        //     $("#card")
                 // if($('#myModal').length) {
                 // $("#")
                    
@@ -26,7 +26,7 @@ $(document).ready(function(){
                 // } else {
                 //    $('#purchaseNotice').hide();
                 // }
-        }
+        
     }
 
     function catArrayPrint(){
@@ -113,10 +113,10 @@ $(document).ready(function(){
             productsArray.push(prod);
             })
             productArrayPrint(productsArray);
-            writeDOM();
+            
         });
     
-
+        writeDOM();
     // //this method works the best for this solution
     // Promise.all([typesJSON(), productsJSON()])
     //     .then(function(results){
