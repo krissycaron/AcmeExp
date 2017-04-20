@@ -2,18 +2,57 @@
     "types": [
         {
             "id": 0,
+            "category_id": 0,
             "name": "Personal",
-            "description": "Small grade products"
+            "description": "Small grade products 0"
         },
         {
             "id": 1,
+            "category_id": 0,
             "name": "Handheld",
-            "description": "Products held for use"
+            "description": "Small grade products 1"
         },
         {
             "id": 2,
+            "category_id": 0,
             "name": "Heavy Duty",
-            "description": "Very dangerous. Take precaution!" 
-        } 
+            "description": "Small grade products 2" 
+        },
+        {
+            "id": 3,
+            "category_id": 1,
+            "name": "Personal",
+            "description": "Products held for use 0"
+        },
+        {
+            "id": 4,
+            "category_id": 1,
+            "name": "Handheld",
+            "description": "Products held for use 1"
+        },
+        {
+            "id": 5,
+            "category_id": 1,
+            "name": "Heavy Duty",
+            "description": "Products held for use 2" 
+        },
+        {
+            "id": 6,
+            "category_id": 2,
+            "name": "Personal",
+            "description": "Very dangerous. Take precaution! 0"
+        },
+        {
+            "id": 7,
+            "category_id": 2,
+            "name": "Handheld",
+            "description": "Very dangerous. Take precaution! 1"
+        },
+        {
+            "id": 8,
+            "category_id": 2,
+            "name": "Heavy Duty",
+            "description": "Very dangerous. Take precaution! 2" 
+        }   
     ]
 }

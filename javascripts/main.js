@@ -5,7 +5,7 @@ $(document).ready(function(){
     var typesArray = [];
     var categoriesArray = [];
 
-
+///// Writing the induvidual cards to the DOM /////
     function writeDOM(){
         var domString = "";
         for(var i=0; i<expolsive.length; i++){
@@ -26,8 +26,10 @@ $(document).ready(function(){
                 // } else {
                 //    $('#purchaseNotice').hide();
                 // }
-        
-    }
+        };
+    
+
+    //// Functions for creating the drop down ////
 
     function catArrayPrint(){
         var catString = "";
@@ -64,6 +66,8 @@ $(document).ready(function(){
             $("#explosiveDiv").append(productString);
     
     }
+    writeDOM();
+    
 
     var categoriesJSON = function(){
         return new Promise(function(resolve, reject){
@@ -95,6 +99,11 @@ $(document).ready(function(){
         })
     };
 
+
+
+
+////////////// Taking the parsed data and adding to arrays ////////////////////
+
         categoriesJSON().then(function(category){
             category.forEach(function(cat){
             categoriesArray.push(cat);
@@ -113,10 +122,11 @@ $(document).ready(function(){
             productsArray.push(prod);
             })
             productArrayPrint(productsArray);
-            
         });
+           console.log(productsArray); 
     
-        writeDOM();
+        // // writeDOM();
+        // console.log(writeDOM);
     // //this method works the best for this solution
     // Promise.all([typesJSON(), productsJSON()])
     //     .then(function(results){
