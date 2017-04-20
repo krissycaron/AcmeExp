@@ -1,0 +1,16 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "name": "Recreational"
+        },
+        {
+            "id": 1,
+            "name": "Commercial"
+        },
+        {
+            "id": 2,
+            "name": "Military"
+        }
+    ]
+}
