@@ -15,21 +15,11 @@ $(document).ready(function(){
             domString += `<h1>${expolsive[i].description}</h1>`;
             domString += `</div></div>`;
         }
-        // $("#explosiveDiv").append(domString);
-        // if($(expolsive).length){
-        //     $("#card")
-                // if($('#myModal').length) {
-                // $("#")
-                   
-                // $('#purchaseNotice').html($('#myModal').html()) // set html
-                // .show(); // show purchaseNotice div
-                // } else {
-                //    $('#purchaseNotice').hide();
-                // }
-        };
+
+    };
     
 
-    //// Functions for creating the drop down ////
+    //// Functions for creating the drop downs ////
 
     function catArrayPrint(){
         var catString = "";
@@ -66,6 +56,7 @@ $(document).ready(function(){
             $("#explosiveDiv").append(productString);
     
     }
+
     writeDOM();
     
 
